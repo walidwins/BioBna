@@ -1,171 +1,301 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Profil</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url("ppp.jpg");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
 
-        .container {
-            background-color: rgba(255, 255, 255, 0.9);
-            width: 80%;
-            max-width: 600px;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-top: 20px;
-            border: 4px solid #ddd;
-        }
+<title>BioBna | Réseaux sociaux</title>
 
-        h1 {
-            margin-top: 10px;
-            font-size: 32px;
-            color: #333;
-        }
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-        .name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 10px;
-            color: #555;
-        }
+<style>
 
-        .links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Arial, sans-serif;
+}
 
-        .links a {
-            display: inline-block;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
+body{
 
-        .links i {
-            font-size: 35px;
-            color: #21551b;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
+background-image:url("ppp.jpg");
+background-size:cover;
+background-position:center;
 
-        .links a:hover i {
-            transform: scale(0.9);
-            color: #fff;
-        }
+display:flex;
+justify-content:center;
+align-items:center;
 
-        .instagram:hover i {
-            background-color: #C13584;
-            border-radius: 40%;
-            padding: 7px;
-        }
+min-height:100vh;
+padding:20px;
 
+}
 
-        .tiktok:hover i {
-            background-color: #341b1b;
-            border-radius: 50%;
-            padding: 7px;
-        }
+/* Carte */
 
-        .facebook:hover i {
-            background-color: #4267B2;
-            border-radius: 50%;
-            padding: 7px;
-        }
+.container{
 
-        .linkedin:hover i {
-            background-color: #0077B5;
-            border-radius: 5%;
-            padding: 6px;
-        }
+background:rgba(255,255,255,0.95);
 
-        /* Section Contacter-Nous */
-        .contact-section {
-            margin-top: 30px;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 600px;
-        }
+width:100%;
+max-width:420px;
 
-        .contact-section h2 {
-            font-size: 28px;
-            color: #333;
-        }
+padding:30px 25px;
 
-        .contact-section a {
-            display: inline-block;
-            padding: 12px 20px;
-            background-color: #25D366;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
+border-radius:20px;
 
-        .contact-section a:hover {
-            background-color: #1d9e5c;
-        }
-    </style>
-    <!-- CDN pour les icônes -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
+
+text-align:center;
+
+}
+
+/* Photo */
+
+.profile-pic{
+
+width:110px;
+height:110px;
+
+border-radius:50%;
+
+border:4px solid #ddd;
+
+margin-bottom:10px;
+
+}
+
+.name{
+
+font-size:26px;
+font-weight:bold;
+color :rgb(29, 171, 51);
+margin-bottom:5px;
+
+}
+
+.subtitle{
+
+color:#777;
+
+margin-bottom:25px;
+
+}
+
+/* réseaux */
+
+.links{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:15px;
+
+}
+
+.social{
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+gap:10px;
+
+padding:16px;
+
+border-radius:12px;
+
+text-decoration:none;
+
+font-size:17px;
+
+font-weight:bold;
+
+background:#f2f2f2;
+
+color:#333;
+
+cursor:pointer;
+
+transition:all 0.25s ease;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+.social i{
+
+font-size:22px;
+
+}
+
+/* effet hover */
+
+.social:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+}
+
+/* effet click mobile */
+
+.social:active{
+
+transform:scale(0.95);
+
+}
+
+/* couleurs */
+
+.instagram:hover{
+background:#E1306C;
+color:white;
+}
+
+.tiktok:hover{
+background:#000;
+color:white;
+}
+
+.facebook:hover{
+background:#1877F2;
+color:white;
+}
+
+.linkedin:hover{
+background:#0A66C2;
+color:white;
+}
+
+/* WhatsApp */
+
+.contact{
+
+margin-top:25px;
+
+}
+
+.whatsapp-btn{
+
+display:block;
+
+margin-top:10px;
+
+padding:15px;
+
+background:#25D366;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-size:18px;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+.whatsapp-btn:hover{
+
+background:#1da851;
+
+}
+
+/* mobile */
+
+@media (max-width:480px){
+
+.links{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <div class="container">
-        <img src="logo.jpg" alt="Photo de profil" class="profile-pic">
-        <div class="name">BioBna</div>
-        <div class="links">
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/bio_bna_officiel?igsh=ZG50d2hvNm93cjhv" target="_blank" class="instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
+<div class="container">
 
-            <!-- TikTok -->
-            <a href="https://www.tiktok.com/@bio.bna?_t=ZM-8typoh9FMaz&_r=1" target="_blank" class="tiktok">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/share/1Baz6VdAYy/?mibextid=wwXIfr" target="_blank" class="facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/bio-bna-13505934a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="linkedin">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-    </div>
+<img src="logo.jpg" class="profile-pic">
 
-    <!-- Section Contacter-Nous -->
-    <div class="contact-section">
-        <h2>Contacter-Nous via WhatsApp</h2>
-        <a href="https://wa.me/0719508999" target="_blank">Envoyer un message sur WhatsApp</a>
-    </div>
+<div class="name">BioBna</div>
+
+<div class="subtitle">Suivez-nous sur nos réseaux sociaux</div>
+
+<div class="links">
+
+<a href="https://www.instagram.com/bio_bna_officiel"
+class="social instagram"
+target="_blank">
+
+<i class="fab fa-instagram"></i>
+Instagram
+
+</a>
+
+<a href="https://www.tiktok.com/@bio.bna"
+class="social tiktok"
+target="_blank">
+
+<i class="fab fa-tiktok"></i>
+TikTok
+
+</a>
+
+<a href="https://www.facebook.com/share/1Baz6VdAYy"
+class="social facebook"
+target="_blank">
+
+<i class="fab fa-facebook"></i>
+Facebook
+
+</a>
+
+<a href="https://www.linkedin.com/in/bio-bna-13505934a"
+class="social linkedin"
+target="_blank">
+
+<i class="fab fa-linkedin"></i>
+LinkedIn
+
+</a>
+
+</div>
+
+<div class="contact">
+
+<h3>Contactez-nous</h3>
+
+<a href="https://wa.me/212719508999"
+class="whatsapp-btn"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+Envoyer un message WhatsApp
+
+</a>
+
+</div>
+
+</div>
 
 </body>
+
 </html>
